@@ -55,20 +55,5 @@ pub fn ui<B: Backend>(f: &mut Frame<B>) {
             .as_ref(),
         )
         .split(chunks[1]);
-
-    let block = Block::default().title("With Borders").borders(Borders::ALL);
-    //f.render_widget(block, bottom_chunks[0]);
-
-    let guage = Gauge::default()
-        .block(Block::default().borders(Borders::ALL).title("Progress"))
-        .gauge_style(
-            Style::default()
-                .fg(Color::White)
-                .bg(Color::Red)
-                .add_modifier(Modifier::ITALIC),
-        )
-        .percent(20);
-    //f.render_widget(guage, bottom_chunks[1]);
-
 }
 
