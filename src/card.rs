@@ -43,6 +43,7 @@ pub struct Card {
     pub value: CardValue,
 }
 
+
 impl Card {
     pub fn new(suite: CardSuite, value: CardValue) -> Card {
         Card {

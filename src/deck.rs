@@ -1,7 +1,7 @@
 use crate::card::{Card, CardSuite, CardValue};
 
-use rand::thread_rng;
 use rand::prelude::SliceRandom;
+use rand::thread_rng;
 
 pub struct Deck {
     pub cards: Vec<Card>,
@@ -9,7 +9,9 @@ pub struct Deck {
 
 impl Deck {
     pub fn new() -> Deck {
-        Deck { cards: [].to_vec() }
+        let mut deck = Deck { cards: [].to_vec() };
+        deck.create_deck();
+        deck
     }
 
     pub fn create_deck(&mut self) {
